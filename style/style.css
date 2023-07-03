@@ -1,0 +1,88 @@
+* {
+  font-family: "Courier New", Courier, monospace;
+}
+body {
+  padding: 2rem;
+}
+
+img {
+  height: 300;
+  width: 400;
+  object-fit: cover;
+  object-position: center;
+}
+
+img:first-child:hover {
+  transform: rotate(30deg);
+  transition: 2ms;
+}
+
+img:last-child:hover {
+  transform: rotate(330deg);
+  transition: 200ms;
+  transform: skewX(30deg, 30deg);
+  transition: 200ms;
+}
+
+img:first-child:hover {
+  transform: rotate(30deg);
+  scale: 0.5;
+  transition: 200ms;
+}
+
+div .anim {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 42;
+}
+@keyframes example {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: red;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: red;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: red;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+figure {
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  border: 1px red;
+}
+
+.box-1:hover {
+  transform: rotate(20deg);
+  transition: 2s;
+  /* transform: scale(1.5); */
+}
+
+.box-2:hover {
+  transform: rotate(50deg) scale(1.5);
+  transition: 2s;
+}

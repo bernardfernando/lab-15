@@ -1,0 +1,87 @@
+* {
+  font-family: "Courier New", Courier, monospace;
+}
+body {
+  padding: 2rem;
+}
+
+img {
+  height: 300;
+  width: 400;
+  object-fit: cover;
+  object-position: center;
+}
+
+img:first-child:hover {
+  transform: rotate(30deg);
+  transition: 2ms;
+}
+
+img:last-child:hover {
+  transform: rotate(330deg);
+  transition: 200ms;
+  transform: skewX(30deg, 30deg);
+  transition: 200ms;
+  transform: rotate(30deg);
+}
+
+img:first-child:hover {
+  transform: rotate(30deg);
+  scale: 0.5;
+  transition: 200ms;
+}
+
+.rounding {
+  margin-top: 2rem;
+  background-color: blue;
+  width: 200px;
+  height: 200px;
+  border-radius: 0;
+  transition: 2s;
+}
+
+.rounding:hover {
+  transition-property: border-radius, background-color;
+  transition-duration: 2s, 6s;
+  transition-timing-function: ease-in, linear;
+  border-radius: 50%;
+  background-color: orangered;
+}
+
+.animations {
+  margin-top: 2rem;
+  background-color: #555555;
+  border: 2px solid #bbbbbb;
+  border-radius: 3%;
+  width: 400px;
+  height: 400px;
+}
+
+.animationsElement {
+  width: 10%;
+  background-color: green;
+  animation-name: moveRight;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 3;
+}
+
+@keyframes moveRight {
+  0% {
+    left: 90%;
+    top: 0;
+  }
+
+  25% {
+    right: 0;
+    top: 90%;
+    background-color: tomato;
+  }
+  50% {
+    left: 90%;
+    top: 0;
+  }
+
+  75% {
+  }
+}
